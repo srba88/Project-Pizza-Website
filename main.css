@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    height: 5000px;
+}
+
 :root{
     --white-color: #ffffff;
     --text-color: #212721;
@@ -13,6 +17,11 @@ img{
     width: 100%;
     vertical-align: bottom;
 }
+
+/* .container-fluid{
+    margin: 0;
+    padding: 0;
+} */
 
 /* navbar */
 
@@ -59,7 +68,7 @@ img{
 .carousel-caption{
     width: 30%;
     left: 30%;
-    bottom: 30%;
+    bottom: 25%;
     transform: translate(-50%, -30%);
     text-align: left;
 }
@@ -72,6 +81,171 @@ img{
     font-size: 17px;
     letter-spacing: 1px;
 }
+
+.carousel-caption-btn{
+    display: inline-block;
+    border: 1px solid var(--white-color);
+    transition: all 0.3s linear;
+}
+
+.carousel-caption-btn a{
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.carousel-caption-btn:hover{
+    background: var(--hover-color);
+    border: 1px solid var(--hover-color);
+}
+
+/* main */
+
+.about-img-left{
+    height: 450px;
+    background: url('img/about-img.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.about-content{
+    position: relative;
+}
+
+/* .about-content:before{
+    content: 'ABOUT';
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+} */
+
+.about-content h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 30px 0;
+}
+
+.carousel-caption-btn.about{
+    display: inline-block;
+    margin: 20px 0 0 0;
+    border: 1px solid var(--hover-color);
+    background: var(--hover-color);
+    transition: all 0.3s linear;
+}
+
+.carousel-caption-btn.about a{
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--white-color);
+    transition: all 0.3s linear;
+}
+
+.carousel-caption-btn.about:hover a{
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+.carousel-caption-btn.about:hover{
+    background: var(--white-color);
+    border: 1px solid var(--hover-color);
+}
+
+main{
+    background: url('img/about-bg.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+
+.title{
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    margin: 0 0 80px 0;
+}
+
+.card{
+    border: none;
+    background-color: transparent;
+}
+
+.card-img-top{
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.card-title{
+    color: var(--white-color);
+}
+
+.card-text{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-price{
+    color: var(--hover-color);
+}
+
+/* .hot-sales-section{
+    position: relative;
+    overflow: hidden;
+} */
+
+#panel-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100;
+}
+
+.row-panel{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; 
+}
+
+
+.row-panel.active{
+    display: block;
+}
+
+.row-panel-img{
+    width: 150px;
+    height: 150px;
+}
+
+.close-panel{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    color: white;
+    font-size: 22px;
+}
+
 
 
 
@@ -86,17 +260,17 @@ img{
     /* header */
 
     .carousel-img{
-        top: 35%;
+        top: 25%;
         left: 50%;
         width: 300px;
-        transform: translate(-50%, -35%);
+        transform: translateX(-50%);
     }
 
     .carousel-caption{
         width: 90%;
         left: 50%;
-        bottom: 8%;
-        transform: translate(-50%, -30%);
+        bottom: 10%;
+        transform: translateX(-50%);
         text-align: center;
     }
     
